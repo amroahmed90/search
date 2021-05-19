@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  padding-bottom: 100px;
+  padding: 0 10px 100px 10px;
   font-family: Arial, sans-serif;
 }
 
@@ -309,5 +309,21 @@ footer span a {
 
 footer span a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 840px) {
+  .logo-container .made-by-in-arabic {
+    font-size: 24px;
+    top: 27.5px;
+    left: 7px;
+  }
+  .logo-container .made-by-in-english {
+    font-size: 11.04px;
+    bottom: 3px;
+    left: 208px;
+  }
+  img#logo {
+    max-width: 200px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

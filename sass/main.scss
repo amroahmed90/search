@@ -242,3 +242,21 @@ footer {
       }
    }
 }
+
+@media (max-width: 840px) {
+   .logo-container {
+      .made-by-in-arabic {
+         font-size: $search-font-size * 0.5;
+         top: 27.5px;
+         left: 7px;
+      }
+      .made-by-in-english {
+         font-size: $search-font-size * 0.23;
+         bottom: 3px;
+         left: 208px;
+      }
+   }
+   img#logo {
+      max-width: 200px;
+   }
+}
