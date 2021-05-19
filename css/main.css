@@ -1,0 +1,308 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+header nav span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #000;
+  padding-right: 20px;
+}
+
+header nav a #nav-logo {
+  display: inline;
+  max-width: 90px;
+  float: left;
+}
+
+header nav a #profile-picture {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+header nav a #profile-picture:hover {
+  -webkit-box-shadow: 0 0 3px 3px #dbdbdb;
+          box-shadow: 0 0 3px 3px #dbdbdb;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.logo-container {
+  position: relative;
+  max-width: 350px;
+  margin: 50px auto 30px auto;
+}
+
+.logo-container .green {
+  color: #34a853;
+}
+
+.logo-container .blue {
+  color: #4285f4;
+}
+
+.logo-container .red {
+  color: #ea4335;
+}
+
+.logo-container .orange {
+  color: #fbbc05;
+}
+
+.logo-container .made-by-in-arabic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  position: absolute;
+  font-size: 48px;
+  font-weight: 900;
+  color: #4285f4;
+  top: 43.5px;
+  left: -90px;
+}
+
+.logo-container .made-by-in-english {
+  font-size: 19.2px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 5px;
+  left: 277px;
+}
+
+img#logo {
+  display: block;
+  margin: 25px auto;
+  max-width: 350px;
+}
+
+h1 {
+  color: #ea4335;
+  padding: 25px 45px;
+  font-size: 1.7rem;
+  font-weight: 500;
+  border-bottom: #dbdbdb 1px solid;
+}
+
+form div {
+  margin-bottom: 25px;
+}
+
+form .search-box {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+form .search-box .fa-search {
+  position: absolute;
+  font-size: 24px;
+  top: 12px;
+  color: #b5b5b5;
+  left: 12px;
+}
+
+form .search-box .fa-times {
+  position: absolute;
+  font-size: 24px;
+  top: 12px;
+  right: 48px;
+  color: #b5b5b5;
+  border-right: #b5b5b5 1px solid;
+  padding-right: 12px;
+  opacity: 0;
+}
+
+form .search-box .fa-microphone {
+  position: absolute;
+  font-size: 24px;
+  top: 12px;
+  right: 16px;
+  color: #ea4335;
+}
+
+form .search-box input {
+  width: 100%;
+  border-radius: 30px;
+  height: 48px;
+  font-size: 19.2px;
+  border: #dbdbdb 1px solid;
+  padding-left: 48px;
+}
+
+form .search-box input:focus {
+  outline: none;
+}
+
+form .form-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form .form-btns button,
+form .form-btns input {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin: 10px;
+  padding: 12px;
+  line-height: 27px;
+}
+
+form .form-btns button:hover,
+form .form-btns input:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 1px 1px #dbdbdb;
+          box-shadow: 0 0 1px 1px #dbdbdb;
+}
+
+form section {
+  margin: 50px 45px;
+}
+
+form section h2 {
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+form section .advanced-search-method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+form section .advanced-search-method .asm-label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 200px;
+  min-width: 200px;
+  margin-bottom: 16.75px;
+}
+
+form section .advanced-search-method .asm-label label {
+  min-width: 200px;
+}
+
+form section .advanced-search-method .asm-input {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  min-width: 200px;
+  margin-bottom: 16.75px;
+}
+
+form section .advanced-search-method .asm-input input[type="text"] {
+  padding: 6.25px;
+  width: 100%;
+  max-width: 600px;
+  border: #b5b5b5 1px solid;
+}
+
+form section .advanced-search-method .asm-input input[type="text"]:focus {
+  outline: #4285f4 1px solid;
+}
+
+form section .advanced-search-method .asm-input input[type="submit"] {
+  padding: 6.25px;
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  background-color: #4285f4;
+  color: #fff;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 60px;
+  background-color: #dbdbdb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer span a {
+  text-decoration: none;
+  color: #828282;
+  padding: 10px;
+}
+/*# sourceMappingURL=main.css.map */

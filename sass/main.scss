@@ -1,0 +1,241 @@
+// imports
+@import "./_resets";
+
+// variables
+$google-color-blue: #4285f4;
+$google-color-red: #ea4335;
+$google-color-orange: #fbbc05;
+$google-color-green: #34a853;
+$google-color-shadow: rgb(219, 219, 219);
+$spacing: 25px;
+$search-font-size: 48px;
+
+// mixins
+@mixin shadow($blur) {
+   box-shadow: 0 0 $blur $blur $google-color-shadow;
+}
+@mixin i-position {
+   position: absolute;
+   font-size: $search-font-size/2;
+   top: $search-font-size/4;
+}
+
+// styling the header and nav
+
+header {
+   width: 100%;
+   display: flex;
+   nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      span {
+         display: flex;
+         align-items: center;
+      }
+      a {
+         text-decoration: none;
+         color: #000;
+         padding-right: 20px;
+         #nav-logo {
+            display: inline;
+            max-width: 90px;
+            float: left;
+         }
+         #profile-picture {
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            &:hover {
+               @include shadow(3px);
+            }
+         }
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+}
+
+// styling the Google logo
+.logo-container {
+   position: relative;
+   max-width: 350px;
+   margin: 50px auto 30px auto;
+   .green {
+      color: $google-color-green;
+   }
+   .blue {
+      color: $google-color-blue;
+   }
+   .red {
+      color: $google-color-red;
+   }
+   .orange {
+      color: $google-color-orange;
+   }
+   .made-by-in-arabic {
+      display: flex;
+      flex-direction: row-reverse;
+      position: absolute;
+      font-size: $search-font-size;
+      font-weight: 900;
+      color: $google-color-blue;
+      top: 43.5px;
+      left: -90px;
+   }
+   .made-by-in-english {
+      font-size: $search-font-size * 0.4;
+      font-weight: 500;
+      position: absolute;
+      bottom: 5px;
+      left: 277px;
+   }
+}
+
+img#logo {
+   display: block;
+   margin: $spacing auto;
+   max-width: 350px;
+}
+
+// styling the h1 tag in the advanced searchpage
+h1 {
+   color: $google-color-red;
+   padding: 25px 45px;
+   font-size: 1.7rem;
+   font-weight: 500;
+   border-bottom: darken($google-color-shadow, 0) 1px solid;
+}
+
+// styling the form
+form {
+   div {
+      margin-bottom: $spacing;
+   }
+   .search-box {
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto;
+      .fa-search {
+         @include i-position;
+         color: darken($google-color-shadow, 15%);
+         left: $search-font-size/4;
+      }
+      .fa-times {
+         @include i-position;
+         right: $search-font-size;
+         color: darken($google-color-shadow, 15%);
+         border-right: darken($google-color-shadow, 15%) 1px solid;
+         padding-right: $search-font-size/4;
+         opacity: 0;
+      }
+      .fa-microphone {
+         @include i-position;
+         right: $search-font-size/3;
+         color: $google-color-red;
+      }
+      input {
+         width: 100%;
+         border-radius: $spacing + 5px;
+         height: $search-font-size;
+         font-size: $search-font-size * 0.4;
+         border: $google-color-shadow 1px solid;
+         padding-left: $search-font-size;
+         &:focus {
+            outline: none;
+            // ~ .fa-times {
+            //    opacity: 1;
+            // }
+         }
+      }
+   }
+   .form-btns {
+      display: flex;
+      justify-content: center;
+      button,
+      input {
+         background-color: lighten($google-color-shadow, 10%);
+         border-radius: 5px;
+         border: none;
+         font-size: $search-font-size/3;
+         margin: 10px;
+         padding: $search-font-size * 0.25;
+         line-height: 27px;
+         &:hover {
+            cursor: pointer;
+            @include shadow(1px);
+         }
+      }
+   }
+   // styling the form section in the advanced search page
+   section {
+      margin: 50px 45px;
+      h2 {
+         font-weight: 500;
+         margin-bottom: $spacing;
+      }
+      .advanced-search-method {
+         display: flex;
+         align-items: center;
+         flex-wrap: wrap;
+         margin-bottom: 0;
+         .asm-label {
+            flex: 1;
+            max-width: 200px;
+            min-width: 200px;
+            margin-bottom: $spacing * 0.67;
+            label {
+               min-width: 200px;
+            }
+         }
+         .asm-input {
+            flex: 2;
+            min-width: 200px;
+            margin-bottom: $spacing * 0.67;
+            input[type="text"] {
+               padding: $spacing * 0.25;
+               width: 100%;
+               max-width: 600px;
+               border: darken($google-color-shadow, 15%) 1px solid;
+               &:focus {
+                  outline: $google-color-blue 1px solid;
+               }
+            }
+            input[type="submit"] {
+               padding: $spacing * 0.25;
+               font-weight: 700;
+               border-radius: 5px;
+               border: none;
+               background-color: $google-color-blue;
+               color: #fff;
+            }
+         }
+      }
+   }
+}
+
+footer {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   min-height: 60px;
+   background-color: $google-color-shadow;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   span {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      a {
+         text-decoration: none;
+         color: darken($color: $google-color-shadow, $amount: 35%);
+         padding: 10px;
+      }
+   }
+}

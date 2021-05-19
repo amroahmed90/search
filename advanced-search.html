@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./css/main.css" />
+      <title>Advanced Search</title>
+   </head>
+   <body>
+      <header>
+         <nav>
+            <a href="/index.html">
+               <img
+                  id="nav-logo"
+                  src="./images/google-logo.png"
+                  alt="Google logo"
+               />
+            </a>
+            <span>
+               <a href="./index.html">Search</a>
+               <a href="advanced-search.html">Image Search</a>
+               <a href="#">
+                  <img
+                     id="profile-picture"
+                     src="./images/profile-picture.png"
+                     alt="Profile Picture"
+                  />
+               </a>
+            </span>
+         </nav>
+      </header>
+      <h1>Advanced Search</h1>
+      <form action="https://www.google.com/search" method="get">
+         <section>
+            <h2>Find pages with...</h2>
+            <div class="advanced-search-method">
+               <span class="asm-label">
+                  <label for="all-these-words">all these words:</label>
+               </span>
+               <span class="asm-input">
+                  <input
+                     type="text"
+                     name="as_q"
+                     id="all-these-words"
+                     autofocus
+                  />
+               </span>
+            </div>
+            <div class="advanced-search-method">
+               <span class="asm-label">
+                  <label for="this-exact-word">
+                     this exact word or phrase:
+                  </label>
+               </span>
+               <span class="asm-input">
+                  <input type="text" name="as_epq" id="this-exact-word" />
+               </span>
+            </div>
+            <div class="advanced-search-method">
+               <span class="asm-label">
+                  <label for="any-of-these-words">any of these words:</label>
+               </span>
+               <span class="asm-input">
+                  <input type="text" name="as_oq" id="any-of-these-words" />
+               </span>
+            </div>
+            <div class="advanced-search-method">
+               <span class="asm-label">
+                  <label for="none-of-these-words">none of these words:</label>
+               </span>
+               <span class="asm-input">
+                  <input type="text" name="as_eq" id="none-of-these-words" />
+               </span>
+            </div>
+            <div class="advanced-search-method">
+               <span class="asm-label">
+                  <label for="all-these-words"></label>
+               </span>
+               <span class="asm-input">
+                  <input
+                     type="submit"
+                     id="all-these-words"
+                     value="Advanced Search"
+                  />
+               </span>
+            </div>
+         </section>
+      </form>
+      <footer>
+         <span>
+            <a href="#">About</a>
+            <a href="#">Business</a>
+            <a href="#">Advertising</a>
+            <a href="#">How Search Works</a>
+         </span>
+         <span>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Settings</a>
+         </span>
+      </footer>
+   </body>
+</html>

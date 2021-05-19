@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+         crossorigin="anonymous"
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./css/main.css" />
+      <title>Search</title>
+   </head>
+   <body>
+      <header>
+         <nav>
+            <span></span>
+            <span>
+               <a href="image-search.html">Images</a>
+               <a href="advanced-search.html">Advanced Search</a>
+               <a href="#">
+                  <img
+                     id="profile-picture"
+                     src="./images/profile-picture.png"
+                     alt="Profile Picture"
+                  />
+               </a>
+            </span>
+         </nav>
+      </header>
+      <div class="logo-container">
+         <div class="made-by-in-arabic">
+            <span class="blue">ــــ</span>
+            <span class="red">ـمـ</span>
+            <span class="orange">ـر</span>
+            <span class="green">و</span>
+         </div>
+         <img id="logo" src="./images/google-logo.png" alt="Google logo" />
+         <div class="made-by-in-english">
+            <span class="blue">By</span>
+            <span class="blue">Amro</span>
+         </div>
+      </div>
+      <form action="https://google.com/search">
+         <div class="search-box">
+            <i class="fas fa-search" onclick="submitForm()"></i>
+            <input
+               type="text"
+               name="q"
+               id="search-field"
+               onkeyup="showHideClearSign()"
+               onkeydown="showHideClearSign()"
+            />
+            <i id="clear-field" class="fas fa-times" onclick="clearField()"></i>
+            <i class="fas fa-microphone"></i>
+         </div>
+         <div class="form-btns">
+            <input
+               id="submit-btn"
+               type="submit"
+               value="Google Search"
+               aria-label="Google Search"
+            />
+            <input
+               type="submit"
+               name="btnI"
+               value="I'm Feeling Lucky"
+               aria-label="I'm Feeling Lucky"
+               data-ved="0ahUKEwjC2-zK8MHwAhXOhf0HHcOzCUwQ19QECAw"
+            />
+         </div>
+      </form>
+      <footer>
+         <span>
+            <a href="#">About</a>
+            <a href="#">Business</a>
+            <a href="#">Advertising</a>
+            <a href="#">How Search Works</a>
+         </span>
+         <span>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Settings</a>
+         </span>
+      </footer>
+
+      <script>
+         var search_field = document.getElementById("search-field");
+         var clear_sign = document.getElementsByClassName("fa-times")[0];
+         function showHideClearSign() {
+            if (search_field.value) {
+               clear_sign.setAttribute("style", "opacity: 1");
+            } else {
+               clear_sign.setAttribute("style", "opacity: 0");
+            }
+         }
+         function clearField(event) {
+            search_field.value = "";
+            clear_sign.setAttribute("style", "opacity: 0");
+         }
+         function submitForm() {
+            document.getElementById("submit-btn").click();
+         }
+      </script>
+   </body>
+</html>
