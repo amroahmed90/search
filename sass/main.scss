@@ -235,7 +235,10 @@ footer {
       a {
          text-decoration: none;
          color: darken($color: $google-color-shadow, $amount: 35%);
-         padding: 10px;
+         margin: 10px;
+         &:hover {
+            text-decoration: underline;
+         }
       }
    }
 }
